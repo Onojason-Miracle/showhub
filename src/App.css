@@ -10,7 +10,7 @@
   --white: #ffffff;
   --black: #060606;
   --purple: #330031;
-  --pink:  #ca26ff;;
+  --pink: #ca26ff;
 }
 
 body {
@@ -292,8 +292,6 @@ body {
   margin-top: 62px;
 }
 
-
-
 .company-text p {
   font-family: Inter;
   font-size: 16px;
@@ -307,7 +305,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 62px;
-  
 }
 
 .reglog {
@@ -319,23 +316,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
 }
 
-.products:nth-child(2){
+.products:nth-child(2) {
   margin-left: 80px;
-  
 }
 
-.signup-login{
-color: var(--white);
-text-decoration: none;
+.signup-login {
+  color: var(--white);
+  text-decoration: none;
 }
 
-.signup-login:hover{
+.signup-login:hover {
   color: var(--white);
   text-decoration: underline;
-  }
+}
 
 .wishlist {
   margin-top: 50px;
@@ -358,19 +353,17 @@ text-decoration: none;
 
 .service {
   width: 90%;
-margin: auto;
+  margin: auto;
   margin-top: 100px;
- 
 }
 
 .service-service {
   width: 90%;
-margin: auto;
+  margin: auto;
   margin-top: 20px;
- 
 }
 
-.service-wrapper{
+.service-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -379,8 +372,6 @@ margin: auto;
   height: 572px;
   width: 348px;
   margin-top: 50px;
-
-  
 }
 
 .purple {
@@ -409,10 +400,9 @@ margin: auto;
   font-weight: 700;
   letter-spacing: 0.125em;
   border: none;
- 
 }
 
-.service-btn:hover{
+.service-btn:hover {
   background-color: var(--white);
   border: 3px solid #330031;
   color: var(--purple);
@@ -421,82 +411,74 @@ margin: auto;
 .white {
   background-color: var(--white);
   height: 415px;
- 
 }
 
-.white-text{
+.white-text {
   width: 85%;
   margin: auto;
   text-align: left;
   padding-top: 50px;
 }
 
-.service-header{
+.service-header {
   font-family: var(--font);
-font-size: 40px;
-font-weight: 700;
-letter-spacing: 0.125em;
-text-align: center;
-
-
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  text-align: center;
 }
 
-.service-icon{
+.service-icon {
   width: 24px;
-height: 24px;
-color:var(--pink);
-margin-left: 10px;
-
+  height: 24px;
+  color: var(--pink);
+  margin-left: 10px;
 }
 
-.resolutions{
+.resolutions {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
 
-.resolutions p{
+.resolutions p {
   margin-top: 30px;
 }
 
 /* LOGIN */
-.login{
-
+.login {
 }
 
-.login-form{
+.login-form {
   height: 424px;
-width: 60%;
-margin: auto;
-border-radius: 20px;
-background-color: var(--purple);
-margin-top: 20px;
-
-}
-
-.login-header{
+  width: 60%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: var(--purple);
   margin-top: 20px;
 }
 
-.login-header h4{
-  font-family: var(--font);
-font-size: 50px;
-font-weight: 700;
-letter-spacing: 0.205em;
-text-align: center;
-
+.login-header {
+  margin-top: 20px;
 }
 
-.login-header p{
+.login-header h4 {
   font-family: var(--font);
-font-size: 25px;
-font-weight: 400;
-letter-spacing: 0.035em;
-text-align: center;
-
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 0.205em;
+  text-align: center;
 }
 
-.form-div{
+.login-header p {
+  font-family: var(--font);
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.035em;
+  text-align: center;
+}
+
+.form-div {
   width: 75%;
   height: 424px;
   margin: auto;
@@ -506,19 +488,19 @@ text-align: center;
   justify-content: center;
 }
 
-.forgotpswd{
+.forgotpswd {
   text-decoration: none;
 }
 
-.forgotpswd:hover{
+.forgotpswd:hover {
   text-decoration: underline;
 }
 
-.button{
-  width: 50%
+.button {
+  width: 50%;
 }
 
-.signin{
+.signin {
   width: 60%;
   height: 128px;
   background-color: var(--purple);
@@ -527,7 +509,7 @@ text-align: center;
   border-radius: 20px;
 }
 
-.signin-div{
+.signin-div {
   width: 75%;
   height: 128px;
   margin: auto;
@@ -536,12 +518,28 @@ text-align: center;
   flex-direction: column;
   justify-content: center;
   font-family: var(--font);
-font-weight: 400;
-letter-spacing: 0.035em;
-text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.035em;
+  text-align: center;
 }
-
 
 /* SIGNUP */
 
+.signup-form {
+  height: 600px;
+  width: 60%;
+  margin: auto;
+  background-color: var(--purple);
+  border-radius: 20px;
+  margin-top: 20px;
+}
 
+.signup-form-div {
+  width: 75%;
+  height: 600px;
+  margin: auto;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

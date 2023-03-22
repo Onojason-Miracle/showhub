@@ -51,7 +51,9 @@ function HomePro() {
               </div>
             </div>
             <div className="purple2">
-            <h4><button className="service-btn">Buy</button></h4>
+              <h4>
+                <button className="service-btn">Buy</button>
+              </h4>
             </div>
           </div>
 
@@ -60,7 +62,7 @@ function HomePro() {
               <h4>Standard</h4>
             </div>
             <div className="white">
-            <div className="white-text">
+              <div className="white-text">
                 <p>
                   Watch all you want. Ad-free.{" "}
                   <i class="fa-solid fa-check-double service-icon"></i>
@@ -85,10 +87,12 @@ function HomePro() {
 
                   <div>
                     <p>
-                      1080p <i class="fa-solid fa-check-double service-icon"></i>
+                      1080p{" "}
+                      <i class="fa-solid fa-check-double service-icon"></i>
                     </p>
                     <p>
-                      Better <i class="fa-solid fa-check-double service-icon"></i>
+                      Better{" "}
+                      <i class="fa-solid fa-check-double service-icon"></i>
                     </p>
                     <p>
                       2500NGN{" "}
@@ -100,7 +104,9 @@ function HomePro() {
             </div>
 
             <div className="purple2">
-            <h4><button className="service-btn">Buy</button></h4>
+              <h4>
+                <button className="service-btn">Buy</button>
+              </h4>
             </div>
           </div>
 
@@ -109,7 +115,7 @@ function HomePro() {
               <h4>Premuim</h4>
             </div>
             <div className="white">
-            <div className="white-text">
+              <div className="white-text">
                 <p>
                   Watch all you want. Ad-free.{" "}
                   <i class="fa-solid fa-check-double service-icon"></i>
@@ -134,7 +140,8 @@ function HomePro() {
 
                   <div>
                     <p>
-                      4k + HDR <i class="fa-solid fa-check-double service-icon"></i>
+                      4k + HDR{" "}
+                      <i class="fa-solid fa-check-double service-icon"></i>
                     </p>
                     <p>
                       Best <i class="fa-solid fa-check-double service-icon"></i>
@@ -149,7 +156,9 @@ function HomePro() {
             </div>
 
             <div className="purple2">
-              <h4><button className="service-btn">Buy</button></h4>
+              <h4>
+                <button className="service-btn">Buy</button>
+              </h4>
             </div>
           </div>
         </div>
