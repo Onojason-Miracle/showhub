@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Homenav() {
   return (
-    <div>
+    <div className="navSection">
       <nav className="navbar">
         <div className="logo-div">
           <img
@@ -39,13 +39,15 @@ function Navbar() {
             <li>
               <Link className="login-link" to="/login">Login</Link>
             </li>
-            <li>
+           
+           <li>
               <div>
               <Link to="/signup" className="signup">
                 Signup
               </Link>
               </div>
             </li>
+           
           </ul>
         </div>
       </nav>
@@ -53,4 +55,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Homenav;

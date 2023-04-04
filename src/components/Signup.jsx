@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Homenav from "./Homenav";
 import { Link } from "react-router-dom";
 import Homefooter from "./Homefooter";
 
 function Signup() {
   return (
     <>
-      <Navbar />
+      <Homenav />
       <div>
         <div className="login-header">
           <h4>ShowHub</h4>

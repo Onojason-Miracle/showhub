@@ -4,13 +4,13 @@ import Homefooter from "./Homefooter";
 import { Link } from "react-router-dom";
 import Overview from "./Overview";
 
-function Series() {
+function Page4() {
   const [data, setData] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState([]);
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&query=Movie&language=en-US&page=2&year=2022`
+      `https://api.themoviedb.org/3/search/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&query=Movie&language=en-US&page=4&year=2022`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -33,7 +33,7 @@ function Series() {
   return (
     <>
       <Homenav />
-      <h1 className="text-center mt-4">Seasonal Movies</h1>
+      <h1 className="text-center mt-4">Popular Movies</h1>
       <div className="movies">
         <ul>
           {data.map((movie) => (
@@ -63,6 +63,44 @@ function Series() {
             </li>
           ))}
         </ul>
+
+        <div className="pages">
+        <p id="other-page">
+            <Link className="link" id="other-page" to="/movies">
+              1
+            </Link>
+          </p>
+
+          <p id="other-page">
+            <Link className="link" id="other-page" to="/page2">
+              2
+            </Link>
+          </p>
+         
+          <p id="other-page">
+            <Link className="link" id="other-page" to="/page3">
+              3
+            </Link>
+          </p>
+
+          <p id="active-page">
+            <Link className="link" id="active-page"  to="/page4">
+              4
+            </Link>
+          </p>
+
+         
+          <p id="other-page">
+            <Link className="link" id="other-page" to="/page5">
+              5
+            </Link>
+          </p>
+          <p id="other-page">
+            <Link className="link" id="other-page" to="/page5">
+              6
+            </Link>
+          </p>
+        </div>
       </div>
 
       {/* <Overview selectedMovie={selectedMovie} /> */}
@@ -74,4 +112,4 @@ function Series() {
   );
 }
 
-export default Series;
+export default Page4;

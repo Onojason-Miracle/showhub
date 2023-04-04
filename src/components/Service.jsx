@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Homenav from "./Homenav";
 import Homefooter from "./Homefooter";
 
 function Service() {
   return (
     <>
-      <Navbar />
+      <Homenav />
       <div className="service-service">
         <h1 className="service-header">Principal Service</h1>
         <div className="service-wrapper">

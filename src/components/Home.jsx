@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Homefooter from "./Homefooter";
 import HomePro from "./HomePro";
@@ -23,9 +24,7 @@ function Home() {
             </p>
 
             <p>
-              <a href="index.html" className="  btn headerBtn ">
-                Start Now
-              </a>
+            <Link  className="  btn headerBtn " to="/service"> Start Now</Link>
             </p>
           </div>
 

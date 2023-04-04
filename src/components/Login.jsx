@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Homenav from "./Homenav";
 import { Link } from "react-router-dom";
 import Homefooter from "./Homefooter";
 
 function Login() {
   return (
     <>
-      <Navbar />
+      <Homenav />
       <div className="login">
         <div className="login-header">
           <h4>ShowHub</h4>
