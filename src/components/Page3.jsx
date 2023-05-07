@@ -10,7 +10,7 @@ function Page3() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&query=Movie&language=en-US&page=3&year=2022`
+      `https://api.themoviedb.org/3/discover/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=3&with_watch_monetization_types=flatrate`
     )
       .then((response) => response.json())
       .then((data) => {

@@ -3,6 +3,22 @@ import Homenav from "./Homenav";
 import Movies from "./Movies";
 
 
+
+
+// function Overview({ movie }) {
+//   return (
+//     <div>
+//       <h2>{movie.title}</h2>
+//       <p>{movie.overview}</p>
+//       <p>Rating: {movie.vote_average}</p>
+//       <p>Release Date: {movie.release_date}</p>
+//     </div>
+//   );
+// }
+
+// export default Overview;
+
+
 function Overview({ selectedMovie }) {
 
    

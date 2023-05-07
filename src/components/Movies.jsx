@@ -9,13 +9,14 @@ function Movies() {
   const [selectedMovie, setSelectedMovie] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&query=Movie&language=en-US&page=1&year=2022`
-    )
+   
+    
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate `)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         setData(data.results);
+        // setData(data.slice(0, 20));
       });
   }, []);
 
@@ -26,43 +27,54 @@ function Movies() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setSelectedMovie(data.results);
+        setSelectedMovie(data);
       });
   };
+
+  // https://api.tvmaze.com/schedule/web?date=2023-04-10
 
   return (
     <>
       <Homenav />
       <h1 className="text-center mt-4">Popular Movies</h1>
+
       <div className="movies">
-        <ul>
-          {data.map((movie) => (
-            <li className="card" key={movie.id}>
-              <div className="card-body">
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                  className="card-img-top"
-                  alt="movie pix"
-                />
 
-                <Link to="/overview">
-                  <h5
-                    className="card-title movie-link mt-3 "
-                    onClick={() => handleMovieClick(movie.id)}
-                  >
-                    {movie.title}
-                  </h5>
-                </Link>
 
-                <p className="card-text">{movie.rating}</p>
-                <p>
-                  <b>Release Date: </b>
-                  {movie.release_date}
-                </p>
-              </div>
-            </li>
-          ))}
-        </ul>
+
+
+      <ul>
+  {data ? data.map((movie) => {
+    console.log("hello there"); // add console.log statement here
+    return (
+      <li className="card" key={movie.id}>
+        <div className="card-body">
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+            className="card-img-top"
+            alt="movie pix"
+          />
+
+          <Link to="/overview">
+            <h5
+              className="card-title movie-link mt-3 "
+              onClick={() => handleMovieClick(movie.id)}
+            >
+              {movie.title}
+            </h5>
+          </Link>
+
+          {/* <p className="card-text text-center" style={{borderRadius:"100%", backgroundColor:"red"}}>{movie.vote_average *10 + "%"}</p> */}
+          <p>
+            <b>Release Date: </b>
+            {movie.release_date}
+          </p>
+        </div>
+      </li>
+    );
+  }) : null}
+</ul>
+
 
         <div className="pages">
           <p id="active-page">
@@ -78,33 +90,29 @@ function Movies() {
           </p>
 
           <p id="other-page">
-            <Link className="link" id="other-page" to="/homepage">
+            <Link className="link" id="other-page" to="/page3">
               3
             </Link>
           </p>
 
           <p id="other-page">
-            <Link className="link" id="other-page" to="/homepage">
+            <Link className="link" id="other-page" to="/page4">
               4
             </Link>
           </p>
 
           <p id="other-page">
-            <Link className="link" id="other-page" to="/homepage">
+            <Link className="link" id="other-page" to="/page5">
               5
             </Link>
           </p>
           <p id="other-page">
-            <Link className="link" id="other-page" to="/homepage">
+            <Link className="link" id="other-page" to="/page6">
               6
             </Link>
           </p>
         </div>
       </div>
-
-      {/* <Overview selectedMovie={selectedMovie} /> */}
-
-      {/* {selectedMovie && <Overview selectedMovie={selectedMovie} />} */}
 
       <Homefooter />
     </>

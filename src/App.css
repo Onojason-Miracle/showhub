@@ -19,15 +19,13 @@ body {
 
 /* NAVBAR */
 
-.navSection{
+.navSection {
   box-shadow: 5px 5px 50px 5px grey;
- 
 }
 
 .navbar {
   width: 90%;
   margin: auto;
-
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -66,7 +64,9 @@ body {
 }
 
 .links {
-  width: 35%;
+  width: 60%;
+  margin-top: 10px;
+  margin-left: 40px;
 }
 
 .links ul {
@@ -94,6 +94,12 @@ body {
   width: 5%;
 }
 
+.logsign {
+  width: 30%;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
 .logsign ul {
   display: flex;
   justify-content: space-evenly;
@@ -114,29 +120,43 @@ body {
   text-align: left;
 }
 
-.logsign {
-  width: 20%;
-  margin-top: 10px;
-}
-
 .login-link {
   border: 1px solid #000000;
   border-radius: 10px;
   padding: 5px 16px 5px 16px;
-  
-  
 }
 
-.logsign ul li div a{
+.logsign ul li div a {
   color: var(--white);
 }
 
-.signup{
- 
+.signup {
   border: 1px solid #330031;
   border-radius: 10px;
   padding: 5px 16px 5px 16px;
   box-shadow: 20px 20px 50px 10px #330031 inset;
+}
+
+#mobile-view {
+  display: none;
+}
+
+#web-view {
+  display: flex;
+}
+
+#big-screen {
+  display: flex;
+  width: 80%;
+}
+
+.navbar-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--purple);
 }
 
 /* HOMEPAGE */
@@ -189,6 +209,8 @@ body {
   color: var(--white);
   margin-top: 68px;
 }
+
+/* https://api.themoviedb.org/3/search/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&query=Movie&language=en-US&page=3&year=2022 */
 
 .headerPtag {
   font-family: var(--font);
@@ -567,20 +589,20 @@ body {
 
 /* MOVIES */
 
-.movies{
+.movies {
   width: 90%;
   margin: auto;
   margin-top: 30px;
 }
 
-
-.card-img-top{
+.card-img-top {
   width: 100%;
   height: 200px;
   object-fit: contain;
+  border-radius: 20px;
 }
-.card{
-  width: 15rem; 
+.card {
+  width: 15rem;
   display: flex;
   justify-content: space-evenly;
   height: 400px;
@@ -590,71 +612,311 @@ body {
   box-shadow: 20px 20px 50px 10px pink inset;
 }
 
-.movies ul{
+.movies ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.movies ul li{
+.movies ul li {
   list-style-type: none;
 }
 
-.movies ul li a{
+.movies ul li a {
   text-decoration: none;
   text-align: center;
   color: var(--black);
 }
 
-.movies ul li a:hover{
-  text-decoration: none;
+.movies ul li a:hover {
+  text-decoration: underline;
   text-align: center;
   color: var(--purple);
 }
 
-.pages{
+.pages {
   display: flex;
- align-items: center;
- width: 30%;
- margin: auto;
- margin-top: 20px;
- gap: 40px;
+  align-items: center;
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  gap: 40px;
 }
 
-
-#active-page{
+#active-page {
   background-color: pink;
   color: var(--black);
- text-decoration: none;
+  text-decoration: none;
 }
 
-#active-page a{
+#active-page a {
   padding: 7px 16px 7px 16px;
 }
 
-#other-page{
+#other-page {
   background-color: var(--purple);
   color: var(--white);
- text-decoration: none;
+  text-decoration: none;
 }
 
-#other-page:hover{
+#other-page:hover {
   background-color: pink;
   color: var(--black);
- text-decoration: none;
+  text-decoration: none;
 }
-#other-page a{
+#other-page a {
   color: var(--white);
   text-decoration: none;
   padding: 7px 16px 7px 16px;
 }
 
-#other-page a:hover{
+#other-page a:hover {
   background-color: pink;
   color: var(--black);
 }
 
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 768px) and (min-width: 300px) {
+  #mobile-view {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-direction: row;
+    position: fixed;
+    top: 20px;
+    z-index: 1;
+  
+  }
+
+  #toggle-navbar {
+    position: fixed;
+    top: 55px;
+    left: 0px;
+    background: linear-gradient(
+      135deg,
+      #ca26ff 7.17%,
+      #f4cac0 85.48%,
+      #fff3b0 100%
+    );
+    height: 100vh;
+    width: 100%;
+    padding: 40px 50px 0 10px;
+    z-index: 1;
+  }
+
+  #web-view {
+    display: none;
+  }
+
+  #mimie {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logsign ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .logsign ul li {
+    margin-bottom: 20px;
+  }
+
+  .links ul li {
+    margin-bottom: 30px;
+  }
+
+  .logsign {
+    width: 50%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .login-link {
+    margin-bottom: 40px;
+  }
+
+  /* HOME PAGE */
+
+  .wrapper {
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #ca26ff;
+    margin-top: 100px;
+  }
+
+  .wrapperDiv {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .wrapperHeader {
+    width: 80%;
+    margin-top: 20px;
+  
+  }
 
 
+  .headerPtag {
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.015em;
+    text-align: left;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+  }
 
+  .header-image {
+    display: none;
+  }
+
+  .headerBtn {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  /* SERVICE */
+  .service-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .service {
+    margin-top: 50px;
+  }
+
+  .service-div {
+    height: 572px;
+    width: 94%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .purple {
+    width: 100%;
+  }
+
+  .service-btn {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer {
+    height: fit-content;
+    width: 100%;
+    background-color: #330031;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .footerDiv {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    color: var(--white);
+  flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .line {
+  display: none;
+  }
+
+  .footer-links {
+  
+    margin-top: 32px;
+  }
+
+  .footer-anchor{
+    text-align: center;
+  }
+
+  .footerUL{
+    margin-top: 10px;
+   
+  }
+
+  .footerUL li {
+    text-align: left;
+    list-style-type: none;
+    text-decoration: underline;
+  }
+
+  .sponsors-text {
+   
+    width: 100%;
+    margin-top: 32px;
+
+  }
+
+  .sponsors-text p {
+    text-align: left;
+  }
+
+  .company-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+   
+  }
+
+  .wishlist {
+    margin-top: 20px;
+  }
+
+  .copyright {
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .copyright p{
+    text-align: left;
+  }
+
+}

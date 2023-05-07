@@ -1,1 +1,53 @@
+@media only screen and (max-width: 768px) and (min-width: 300px){
+   
+    #mobile-view{
+        display: block !important;
+    }
+      
 
+      #web-view{
+        display: none !important;
+    }
+      
+
+     /* HOME PAGE */
+
+     .wrapper {
+        width: 90%;
+        height: 641px;
+        margin: auto;
+        /* background: linear-gradient(
+          135deg,
+          #ca26ff 7.17%,
+          #f4cac0 85.48%,
+          #fff3b0 100%
+        ); */
+        border-radius: 20px;
+        background-color: #ca26ff;
+      }
+
+
+      .wrapperDiv {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+        justify-content: space-between;
+       
+      }
+
+      .headerPtag {
+        font-family: var(--font);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0.015em;
+        text-align: left;
+        height: 200px;
+        width: 90%;
+        margin: auto;
+        margin-top: 80px;
+      }
+
+     
+}

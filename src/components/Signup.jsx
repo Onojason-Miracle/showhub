@@ -10,7 +10,7 @@ function Signup() {
       <div>
         <div className="login-header">
           <h4>ShowHub</h4>
-          <p>Login to ShowHub</p>
+          <p>Create an account with Showhub</p>
         </div>
         <form className="signup-form">
           <div className="signup-form-div">

@@ -1,8 +1,9 @@
 import React,{useState, useEffect} from "react"; 
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import './App.css';
-import"./index.css";
+
 import Home from "./components/Home";
 import Movies from "./components/Movies";
 import Series from "./components/Series";
@@ -17,6 +18,8 @@ import Page3 from "./components/Page3";
 import Page4 from "./components/Page4";
 import Page5 from "./components/Page5";
 import Page6 from "./components/Page6";
+import Search from "./components/Search";
+
 
 
 
@@ -68,6 +71,10 @@ function App() {
 <Route path="page5" element={<Page5 />} />
 
 <Route path="page6" element={<Page6 />} />
+
+
+
+<Route path="searchbar" element={<Search />} />
 
 <Route path="footer" element={<Footer />} />
 
