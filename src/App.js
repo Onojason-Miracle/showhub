@@ -1,8 +1,10 @@
-import React,{useState, useEffect} from "react"; 
+import React from "react"; 
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import './App.css';
+
+import "./css/App.css";
+import "./css/Responsive.css"
 
 import Home from "./components/Home";
 import Movies from "./components/Movies";
@@ -25,21 +27,6 @@ import Search from "./components/Search";
 
 function App() {
 
-  
-  // const [selectedMovie, setSelectedMovie] = useState([]);
-
- 
-
-  // const handleMovieClick = (id) => {
-  //   fetch(
-  //     `https://api.themoviedb.org/3/movie/${id}?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       setSelectedMovie(data.results);
-  //     });
-  // };
 
   return (
     <>
@@ -60,7 +47,7 @@ function App() {
 
 <Route path="service" element={<Service />} />
 
-<Route path="overview" element={<Overview  />} />
+<Route path="overview" element={<Overview />} />
 
 <Route path="page2" element={<Page2 />} />
 

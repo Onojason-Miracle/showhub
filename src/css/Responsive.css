@@ -1,0 +1,320 @@
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 768px) and (min-width: 300px) {
+ #hamburger {
+      display: block;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+     
+    } 
+    #responsive-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+     
+    }
+
+   .links ul {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0px;
+    }
+
+    .logsign ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 0px;
+      height: 80px;
+    }
+
+    .logo-div {
+      display: flex;
+      width: 20%;
+    }
+
+    .links {
+      width: 100%;
+      margin-top: 10px;
+     
+    }
+
+    .links ul li {
+      list-style-type: none;
+      margin-right: 0px;
+      margin-bottom: 20px;
+    }
+
+    .logsign {
+      width: 30%;
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+
+    .login-link {
+      border: 1px solid #000000;
+      border-radius: 10px;
+      padding: 5px 100px 5px 100px;
+      margin-right: 0px;
+     
+    }
+
+    .signup {
+      border: 1px solid #330031;
+      border-radius: 10px;
+      padding: 5px 100px 5px 100px;
+      box-shadow: 20px 20px 50px 10px #330031 inset;
+    }
+
+    .navbar{
+      
+     
+    }
+
+  
+    /* HOME PAGE */
+  
+    .wrapper {
+      width: 90%;
+      height: fit-content;
+      margin: auto;
+      border-radius: 20px;
+      background-color: #ca26ff;
+      margin-top: 10px;
+    }
+
+    .wrapperDiv {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+      justify-content: space-between;
+    }
+  
+    .wrapperHeader {
+      width: 80%;
+      margin-top: 20px;
+    
+    }
+  
+  
+    .headerPtag {
+      font-family: var(--font);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 0.015em;
+      text-align: left;
+      height: fit-content;
+      width: 90%;
+      margin: auto;
+      margin-top: 50px;
+    }
+  
+    .header-image {
+      display: none;
+    }
+  
+    .headerBtn {
+      margin-top: 50px;
+      text-align: center;
+    }
+  
+    /* SERVICE */
+    .service-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  
+    .service {
+      margin-top: 50px;
+    }
+  
+    .service-div {
+      height: 572px;
+      width: 94%;
+      margin: auto;
+      margin-top: 20px;
+    }
+  
+    .purple {
+      width: 100%;
+    }
+  
+    .service-btn {
+      width: 100%;
+    }
+
+
+    /* SIGNUP */
+    .signup-form {
+      height: 600px;
+      width: 85%;
+      margin: auto;
+      background-color: var(--purple);
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    
+    .signup-form-div {
+      width: 75%;
+      height: 600px;
+      margin: auto;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+/* LOGIN */
+
+.signin {
+  width: 85%;
+  height: 98px;
+  background-color: var(--purple);
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.login-form {
+  height: 400px;
+  width: 85%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: var(--purple);
+  margin-top: 20px;
+}
+
+.button {
+  width: 60%;
+}
+
+  
+    /* FOOTER */
+    .footer {
+      height: fit-content;
+      width: 100%;
+      background-color: #330031;
+      margin-top: 10px;
+      padding-bottom: 20px;
+     
+    }
+
+    .footer-footer {
+      height:fit-content;
+      width: 100%;
+      background-color: #330031;
+      margin-top: 5px;
+      padding-bottom: 20px;
+      padding-top: 40px;
+    }
+  
+    .footerDiv {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      color: var(--white);
+    flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+  
+    .line {
+    display: none;
+    }
+  
+    .footer-links {
+    
+      margin-top: 32px;
+    }
+  
+    .footer-anchor{
+      text-align: center;
+    }
+  
+    .footerUL{
+      margin-top: 10px;
+     
+    }
+  
+    .footerUL li {
+      text-align: left;
+      list-style-type: none;
+      text-decoration: underline;
+    }
+  
+    .sponsors-text {
+     
+      width: 100%;
+      margin-top: 32px;
+  
+    }
+  
+    .sponsors-text p {
+      text-align: left;
+    }
+  
+    .company-text {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 22px;
+     
+    }
+  
+    .wishlist {
+      margin-top: 20px;
+    }
+  
+    .copyright {
+      width: 90%;
+      margin: auto;
+      margin-top: 60px;
+    }
+  
+    .copyright p{
+      text-align: left;
+    }
+
+
+    /* MOVIES */
+
+    .card {
+      width: 18rem;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+      height: 400px;
+      margin-bottom: 30px;
+      border-radius: 20px;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      border-radius: 20px;
+    }
+
+    .releasedate{
+      text-align: center;
+    }
+
+    .pages {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 95%;
+      margin: auto;
+      margin-top: 20px;
+      gap: 0px;
+    }
+  
+  }
+  

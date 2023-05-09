@@ -42,8 +42,8 @@ function Signup() {
             <p className="text-center">
               <input
                 type={"button"}
-                value="Login"
-                className="btn btn-light button mt-md-4"
+                value="create account"
+                className="btn btn-light button mt-4"
               />
             </p>
           </div>

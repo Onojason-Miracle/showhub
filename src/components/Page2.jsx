@@ -65,18 +65,18 @@ function Page2() {
         </ul>
 
         <div className="pages">
-        <p id="other-page">
+          <p id="other-page">
             <Link className="link" id="other-page" to="/movies">
               1
             </Link>
           </p>
 
           <p id="active-page">
-            <Link className="link" id="active-page"  to="/page2">
+            <Link className="link" id="active-page" to="/page2">
               2
             </Link>
           </p>
-         
+
           <p id="other-page">
             <Link className="link" id="other-page" to="/page3">
               3
@@ -99,10 +99,6 @@ function Page2() {
           </p>
         </div>
       </div>
-
-      {/* <Overview selectedMovie={selectedMovie} /> */}
-
-      {/* {selectedMovie && <Overview selectedMovie={selectedMovie} />} */}
 
       <Homefooter />
     </>

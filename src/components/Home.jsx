@@ -15,16 +15,20 @@ function Home() {
             <h4 className="wrapperHeader2">enjoy watching</h4>
 
             <p className="headerPtag">
-              Lorem ipsum dolorz sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enimad minim veniam, quis nostrud exerci
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi enimad minim veniam, quis nostrud exerci
+              Lorem ipsum dolorz sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+              aliquam erat volutpat. Ut wisi enimad minim veniam, quis nostrud
+              exerci Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+              aliquam erat volutpat. Ut wisi enimad minim veniam, quis nostrud
+              exerci
             </p>
 
             <p>
-            <Link  className="  btn headerBtn " to="/service"> Start Now</Link>
+              <Link className="  btn headerBtn " to="/service">
+                {" "}
+                Start Now
+              </Link>
             </p>
           </div>
 
