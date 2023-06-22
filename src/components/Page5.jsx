@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Homenav from "./Homenav";
 import Homefooter from "./Homefooter";
-import { Link } from "react-router-dom";
-import Overview from "./Overview";
+import { Link, useNavigate } from "react-router-dom";
 
-function Page5() {
+function Movies() {
   const [data, setData] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState([]);
+  const navigate = useNavigate();
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     fetch(
@@ -14,26 +14,20 @@ function Page5() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setData(data.results);
       });
   }, []);
 
-  const handleMovieClick = (id) => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setSelectedMovie(data.results);
-      });
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+    navigate("/overview", { state: { selectedMovie: movie } });
   };
 
   return (
     <>
       <Homenav />
       <h1 className="text-center mt-4">Popular Movies</h1>
+
       <div className="movies">
         <ul>
           {data.map((movie) => (
@@ -45,17 +39,14 @@ function Page5() {
                   alt="movie pix"
                 />
 
-                <Link to="/overview">
-                  <h5
-                    className="card-title movie-link mt-3 "
-                    onClick={() => handleMovieClick(movie.id)}
-                  >
-                    {movie.title}
-                  </h5>
-                </Link>
+                <h5
+                  className="card-title movie-link mt-3"
+                  onClick={() => handleMovieClick(movie)}
+                >
+                  {movie.title}
+                </h5>
 
-                <p className="card-text">{movie.rating}</p>
-                <p>
+                <p className="releasedate">
                   <b>Release Date: </b>
                   {movie.release_date}
                 </p>
@@ -63,54 +54,61 @@ function Page5() {
             </li>
           ))}
         </ul>
-
-        <div className="pages">
-        <p id="other-page">
-            <Link className="link" id="other-page" to="/movies">
-              1
-            </Link>
-          </p>
-
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page2">
-              2
-            </Link>
-          </p>
-         
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page3">
-              3
-            </Link>
-          </p>
-
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page4">
-              4
-            </Link>
-          </p>
-
-          <p id="active-page">
-            <Link className="link" id="active-page"  to="/page5">
-              5
-            </Link>
-          </p>
-
-         
-        <p id="other-page">
-            <Link className="link" id="other-page" to="/page6">
-              6
-            </Link>
-          </p>
-        </div>
       </div>
 
-      {/* <Overview selectedMovie={selectedMovie} /> */}
+      {selectedMovie && (
+        <div className="overview">
+          <h2>{selectedMovie.title}</h2>
+          <p>{selectedMovie.overview}</p>
+          <p>
+            <b>Release Date: </b>
+            {selectedMovie.release_date}
+          </p>
+        </div>
+      )}
 
-      {/* {selectedMovie && <Overview selectedMovie={selectedMovie} />} */}
+      <div className="pages">
+        <p id="active-page">
+          <Link className="link" id="other-page" to="/Movies">
+            1
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page2">
+            2
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page3">
+            3
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page4">
+            4
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="active-page" to="/page5">
+            5
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page6">
+            6
+          </Link>
+        </p>
+      </div>
 
       <Homefooter />
     </>
   );
 }
 
-export default Page5;
+export default Movies;
+

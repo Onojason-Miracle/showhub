@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Homenav from "./Homenav";
 import Homefooter from "./Homefooter";
-import { Link } from "react-router-dom";
-import Overview from "./Overview";
+import { Link, useNavigate } from "react-router-dom";
 
 function Movies() {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [genres, setGenres] = useState([]);
+
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate `
+      `https://api.themoviedb.org/3/discover/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -18,15 +20,23 @@ function Movies() {
       });
   }, []);
 
-  const handleMovieClick = (id, event) => {
-    event.preventDefault();
+  useEffect(() => {
+    // Fetch genres
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US`
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US`
     )
       .then((response) => response.json())
       .then((data) => {
-        setSelectedMovie(data);
-      });
+        setGenres(data.genres);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  
+
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+    navigate("/overview", { state: { selectedMovie: movie, genres: genres } });
+
   };
 
   return (
@@ -45,19 +55,12 @@ function Movies() {
                   alt="movie pix"
                 />
 
-                <Link
-                  to={{
-                    pathname: "/overview",
-                    state: { selectedMovie: movie },
-                  }}
+                <h5
+                  className="card-title movie-link mt-3"
+                  onClick={() => handleMovieClick(movie)}
                 >
-                  <h5
-                    className="card-title movie-link mt-3"
-                    onClick={(event) => handleMovieClick(movie.id, event)}
-                  >
-                    {movie.title}
-                  </h5>
-                </Link>
+                  {movie.title}
+                </h5>
 
                 <p className="releasedate">
                   <b>Release Date: </b>
@@ -67,45 +70,55 @@ function Movies() {
             </li>
           ))}
         </ul>
+      </div>
 
-        {selectedMovie && <Overview selectedMovie={selectedMovie} />}
-
-        <div className="pages">
-          <p id="active-page">
-            <Link className="link" id="active-page" to="/Movies">
-              1
-            </Link>
-          </p>
-
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page2">
-              2
-            </Link>
-          </p>
-
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page3">
-              3
-            </Link>
-          </p>
-
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page4">
-              4
-            </Link>
-          </p>
-
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page5">
-              5
-            </Link>
-          </p>
-          <p id="other-page">
-            <Link className="link" id="other-page" to="/page6">
-              6
-            </Link>
+      {selectedMovie && (
+        <div className="overview">
+          <h2>{selectedMovie.title}</h2>
+          <p>{selectedMovie.overview}</p>
+          <p>
+            <b>Release Date: </b>
+            {selectedMovie.release_date}
           </p>
         </div>
+      )}
+
+      <div className="pages">
+        <p id="active-page">
+          <Link className="link" id="active-page" to="/Movies">
+            1
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page2">
+            2
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page3">
+            3
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page4">
+            4
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page5">
+            5
+          </Link>
+        </p>
+
+        <p id="other-page">
+          <Link className="link" id="other-page" to="/page6">
+            6
+          </Link>
+        </p>
       </div>
 
       <Homefooter />
@@ -114,3 +127,4 @@ function Movies() {
 }
 
 export default Movies;
+

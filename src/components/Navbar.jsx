@@ -55,7 +55,7 @@ function Navbar() {
                 <Link to="/movies">Movies</Link>
               </li>
               <li>
-                <Link to="/series">Series</Link>
+                <Link to="/searchbar">Search</Link>
               </li>
               <li>
                 <Link to="/footer">Contact</Link>
