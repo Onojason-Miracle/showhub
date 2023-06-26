@@ -7,6 +7,8 @@ function Page3() {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [genres, setGenres] = useState([]);
+
 
   useEffect(() => {
     fetch(
@@ -18,9 +20,23 @@ function Page3() {
       });
   }, []);
 
+  useEffect(() => {
+    // Fetch genres
+    fetch(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setGenres(data.genres);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  
+
   const handleMovieClick = (movie) => {
     setSelectedMovie(movie);
-    navigate("/overview", { state: { selectedMovie: movie } });
+    navigate("/overview", { state: { selectedMovie: movie, genres: genres } });
+
   };
 
   return (
