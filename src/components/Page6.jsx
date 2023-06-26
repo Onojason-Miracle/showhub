@@ -3,7 +3,7 @@ import Homenav from "./Homenav";
 import Homefooter from "./Homefooter";
 import { Link, useNavigate } from "react-router-dom";
 
-function Page4() {
+function Page6() {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const [selectedMovie, setSelectedMovie] = useState(null);
