@@ -302,9 +302,10 @@
       border-radius: 20px;
     }
 
-    .releasedate{
+    .releasedate, .movie-link{
       text-align: center;
     }
+
 
     .pages {
       display: flex;
@@ -315,6 +316,66 @@
       margin-top: 20px;
       gap: 0px;
     }
+
+    /* SEARCH */
+
+    .search-form{
+      width: 95%;
+      margin: auto;
+      margin-top: 10%;
+      position: relative;
+    }
+
+    .search-btn{
+      background-color: #330031;
+      border: 1px solid transparent;
+      color: var(--white);
+      padding: 8px 30px 8px 30px;
+      border-radius: 10px;
+      position: absolute;
+      right: 0;
+      
+    }
+
+    .search-ul{
+      margin-top: 20%;
+    }
+
+    /* OVERVIEW */
+
+    .overview-wrapper{
+      width: 80%;
+      margin: auto;
+      margin-top: 7%;
+    }
+
+    .overview{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .overview-details{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 10%;
+      
+    }
+
+    .overview-img{
+      height: fit-content;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 900px) and (min-width: 769px) {
   
+    /* NAVBAR */
+
+   
+
   }
   
