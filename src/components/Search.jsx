@@ -18,6 +18,9 @@ function Search() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // 1. maintain state
+    // 2. the search param should be included in the url 
+
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US&query=${searchQuery}&page=1&include_adult=false`
     )

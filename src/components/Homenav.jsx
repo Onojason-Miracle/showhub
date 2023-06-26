@@ -63,9 +63,9 @@ function Navbar() {
               <li>
                 <Link to="/service">Products</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/series">People</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
