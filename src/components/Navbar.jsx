@@ -60,9 +60,9 @@ function Navbar() {
               <li>
                 <Link to="/footer">Contact</Link>
               </li>
-              {/* <li>
+              <li>
                 <Link to="/service">Products</Link>
-              </li> */}
+              </li>
             </ul>
           </div>
 
