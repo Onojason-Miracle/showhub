@@ -5,7 +5,15 @@ function Nopage() {
   return (
     <>
       <Homenav />
-      <h1 className="text-center">You don miss road o</h1>
+      <div className="nopage">
+        <div className="inner-nopage">
+          <i class="fa-solid fa-face-frown-open nopage-icon"></i>
+          <h1 className="text-center">
+            Error 404 <br />
+            Page not found
+          </h1>
+        </div>
+      </div>
     </>
   );
 }
