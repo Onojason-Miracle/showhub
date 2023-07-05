@@ -7,7 +7,8 @@ import "./css/Responsive.css";
 
 import Home from "./components/Home";
 import Movies from "./components/Movies";
-import Series from "./components/Series";
+import Actors from "./components/Actors";
+import ActorSearch from "./components/ActorSearch";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Service from "./components/Service";
@@ -20,6 +21,7 @@ import Page4 from "./components/Page4";
 import Page5 from "./components/Page5";
 import Page6 from "./components/Page6";
 import Search from "./components/Search";
+import ActorsDetails from "./components/ActorsDetails";
 
 function App() {
   return (
@@ -32,9 +34,13 @@ function App() {
 
           <Route path="login" element={<Login />} />
 
+          <Route path="actors_details" element={<ActorsDetails />} />
+
+          <Route path="actors_search" element={<ActorSearch />} />
+
           <Route path="signup" element={<Signup />} />
 
-          <Route path="series" element={<Series />} />
+          <Route path="actors" element={<Actors />} />
 
           <Route path="movies" element={<Movies />} />
 

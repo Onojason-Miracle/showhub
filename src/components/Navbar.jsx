@@ -42,13 +42,13 @@ function Navbar() {
               </Link>
             </li>
             <li className="Nav-item">
-              <Link to="/searchbar" className="Nav-link">
-                Search
+              <Link to="/service" className="Nav-link">
+                Products
               </Link>
             </li>
             <li className="Nav-item">
-              <Link to="/service" className="Nav-link">
-                Products
+              <Link to="/actors" className="Nav-link">
+                Actors
               </Link>
             </li>
             <li className="Nav-item">

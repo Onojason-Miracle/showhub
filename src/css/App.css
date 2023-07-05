@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font);
 }
 
 :root {
@@ -276,7 +277,7 @@ body {
   color: var(--white);
   height: 200px;
   width: 650px;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .header-image {
@@ -294,6 +295,10 @@ body {
   color: var(--white);
   text-decoration: none;
   padding-top: 17px;
+}
+
+.pbtn {
+  margin-top: 10%;
 }
 
 .headerBtn:hover {
@@ -676,11 +681,15 @@ body {
   width: 15rem;
   display: flex;
   justify-content: space-evenly;
-  height: 400px;
+  height: 420px;
   margin-bottom: 20px;
   border-radius: 20px;
   /* box-shadow: 20px 20px 50px 15px grey; */
   box-shadow: 20px 20px 50px 10px pink inset;
+}
+
+.releasedate {
+  text-align: center;
 }
 
 .movies ul {
@@ -752,6 +761,10 @@ body {
   cursor: pointer;
 }
 
+.movie-link {
+  text-align: center;
+}
+
 /* OVERVIEW */
 
 .overview-wrapper {
@@ -771,7 +784,6 @@ body {
 
 .overview-details {
   width: 60%;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -781,7 +793,7 @@ body {
 .search-ul {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10%;
+  margin-top: 2%;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -816,6 +828,11 @@ body {
   right: 0;
 }
 
+.search-btn:hover {
+  border: 2px solid #330031;
+  background-color: #ca26ff;
+}
+
 /* NOPAGE */
 .nopage {
   height: 70vh;
@@ -834,4 +851,65 @@ body {
 
 .nopage-icon {
   font-size: 48px;
+}
+
+/* PEOPLE SEARCH */
+
+.pple_search_li {
+  list-style-type: none;
+}
+
+.people-wrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: 7%;
+}
+
+.people {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people-img-div {
+  margin-right: 10%;
+}
+
+.people-img {
+  height: 500px;
+}
+
+.people-details {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.people-movie-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* 
+ACTORS DETAILS */
+
+.details-wrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: 7%;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-img {
+  height: 500px;
+}
+
+.details-main {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -39,6 +39,12 @@ function Overview() {
               <b>Vote Average: </b>
               {selectedMovie.vote_average}
             </p>
+
+            <p>
+              <b>Original Language : </b>
+              {selectedMovie.original_language}
+            </p>
+
             <p>
               <b>Vote Count: </b>
               {selectedMovie.vote_count / 100 + "%"}

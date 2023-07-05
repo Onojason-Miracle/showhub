@@ -15,16 +15,17 @@ function Home() {
             <h4 className="wrapperHeader2">enjoy watching</h4>
 
             <p className="headerPtag">
-              Lorem ipsum dolorz sit amet, consectetuer adipiscing elit, sed
-              diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-              aliquam erat volutpat. Ut wisi enimad minim veniam, quis nostrud
-              exerci Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-              sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-              aliquam erat volutpat. Ut wisi enimad minim veniam, quis nostrud
-              exerci
+              Movies takes audiences on a thrilling journey through captivating
+              storytelling, immersing them in a world of vivid characters and
+              unexpected twists that leave them mesmerized from beginning to
+              end.
+              <br />
+              Are you ready to embark on an unforgettable cinematic adventure?
+              At our platform, we curate a vast collection of films from various
+              genres, ensuring there's something for everyone.
             </p>
 
-            <p>
+            <p className="pbtn">
               <Link className="  btn headerBtn " to="/service">
                 {" "}
                 Start Now

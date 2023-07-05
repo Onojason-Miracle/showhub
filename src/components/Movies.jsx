@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Homenav from "./Homenav";
 import Homefooter from "./Homefooter";
 import { Link, useNavigate } from "react-router-dom";
+import Search from "./Search";
 
 function Movies() {
   const [data, setData] = useState([]);
@@ -11,7 +12,7 @@ function Movies() {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
+      `https://api.themoviedb.org/3/discover/movie?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=true&page=1&with_watch_monetization_types=flatrate`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -36,9 +37,12 @@ function Movies() {
     navigate("/overview", { state: { selectedMovie: movie, genres: genres } });
   };
 
+  // https://api.themoviedb.org/3/person/976?api_key=0c8d9eb082bdb49bc2a86e9312bf02df&language=en-US
+
   return (
     <>
       <Homenav />
+      <Search />
       <h1 className="text-center mt-4">Popular Movies</h1>
 
       <div className="movies">
