@@ -33,7 +33,7 @@ function ActorsDetails() {
   }, [location.state]);
 
   if (!selectedActor) {
-    return <div>No Actor selected</div>;
+  return console.log( "No Actor selected");
   }
 
   return (
@@ -53,7 +53,7 @@ function ActorsDetails() {
               <b>{selectedActor.name}</b>
             </h2>
             <p>
-              <h5>
+              <h5 className="bio">
                 <b>Biography</b>
               </h5>
               {selectedActor.biography}

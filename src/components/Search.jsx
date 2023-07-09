@@ -61,7 +61,7 @@ function Search() {
       <div className="search-wrapper">
         <form onSubmit={handleSubmit} className="search-form">
           <input
-            type="text"
+            type="search"
             value={searchQuery}
             onChange={handleInputChange}
             className="search-form-input"

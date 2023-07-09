@@ -141,6 +141,11 @@
   .headerBtn {
     margin-top: 50px;
     text-align: center;
+    padding-top: 17px;
+  }
+
+  .pbtn {
+    margin-top: 2%;
   }
 
   /* SERVICE */
@@ -316,7 +321,7 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
-    height: 400px;
+    height: 450px;
     margin-bottom: 30px;
     border-radius: 20px;
   }
@@ -363,7 +368,7 @@
   }
 
   .search-ul {
-    margin-top: 20%;
+    margin-top: 2%;
   }
 
   /* OVERVIEW */
@@ -392,6 +397,23 @@
   .overview-img {
     height: fit-content;
     width: 100%;
+  }
+
+  /* PEOPLE */
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .details-main {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
   }
 }
 @media only screen and (max-width: 992px) and (min-width: 769px) {
@@ -599,6 +621,10 @@
     padding-top: 17px;
   }
 
+  .pbtn{
+    margin-top: 3%;
+  }
+
   /* MOVIES */
 
   .pages {
@@ -614,7 +640,7 @@
     width: 18rem;
     display: flex;
     justify-content: space-evenly;
-    height: 350px;
+    height: 420px;
     margin-bottom: 5%;
     border-radius: 20px;
     /* box-shadow: 20px 20px 50px 15px grey; */
@@ -636,6 +662,8 @@
 
   .overview-img {
     height: 100%;
+    width: 80%;
+    margin: auto;
   }
 
   .overview-details {
@@ -658,6 +686,32 @@
     margin-top: 2%;
     margin-right: 6%;
     border: none;
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .overview-img-div {
+    width: 90%;
+    margin: auto;
+  }
+
+  .overview-img {
+   width: 100%;
+  }
+
+  .details-main {
+    width: 80%;
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bio{
+    margin-top: 2%;
   }
 }
 
@@ -752,7 +806,7 @@
     width: 15rem;
     display: flex;
     justify-content: space-evenly;
-    height: 350px;
+    height: 400px;
   }
 
   .pages {
@@ -807,14 +861,14 @@
 
   /* SEARCH */
   .search-ul {
-    margin-top: 10%;
+    margin-top: 3%;
     gap: 3%;
   }
 
   .search-form {
     width: 80%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 7%;
     position: relative;
   }
 
@@ -830,6 +884,14 @@
     margin-right: 5%;
     border: none;
   }
+
+  
+.details-main {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 }
 
 @media only screen and (max-width: 1280px) and (min-width: 1026px) {
