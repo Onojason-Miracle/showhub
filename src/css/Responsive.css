@@ -621,7 +621,7 @@
     padding-top: 17px;
   }
 
-  .pbtn{
+  .pbtn {
     margin-top: 3%;
   }
 
@@ -699,7 +699,7 @@
   }
 
   .overview-img {
-   width: 100%;
+    width: 100%;
   }
 
   .details-main {
@@ -710,7 +710,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  .bio{
+  .bio {
     margin-top: 2%;
   }
 }
@@ -885,13 +885,12 @@
     border: none;
   }
 
-  
-.details-main {
-  width: 55%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .details-main {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 1280px) and (min-width: 1026px) {
@@ -969,6 +968,10 @@
     font-size: 24px;
   }
 
+  .pbtn {
+    margin-top: 0;
+  }
+
   .wrapperHeader2 {
     font-family: var(--font);
     font-size: 40px;
@@ -1002,7 +1005,7 @@
   /* SEARCH */
 
   .search-ul {
-    margin-top: 10%;
+    margin-top: 3%;
     gap: 3%;
   }
 
@@ -1024,5 +1027,23 @@
     margin-top: 1%;
     margin-right: 4%;
     border: none;
+  }
+
+  /* OVERVIEW */
+
+  .overview-details {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+  }
+  /* PEOPLE SEARCH */
+  .details-main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
